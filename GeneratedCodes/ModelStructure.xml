@@ -1,0 +1,20 @@
+
+<ModelStructure MsgType="S_CLIENT" PortValue="IO_Type">
+  <NModel Name="test3.xml">
+    <Component Name="g" Type="Atomic" Class="C_Generator">
+      <Attribute Name="DistributionParameter" Type="int" Value="1" />
+      <Attribute Name="AutonomousVehicleRatio" Type="int" Value="5" />
+      <Attribute Name="ElectronicPaymentRatio" Type="int" Value="5" />
+    </Component>
+    <Component Name="p" Type="Atomic" Class="C_Processor">
+      <Attribute Name="ID" Type="int" Value="0" />
+      <Attribute Name="ProcType" Type="int" Value="0" />
+    </Component>
+    <Component Name="b" Type="Atomic" Class="C_Buffer">
+      <Attribute Name="ID" Type="int" Value="0" />
+    </Component>
+    <Component Name="t" Type="Atomic" Class="C_Transducer">
+      <Attribute Name="MaxCustomers" Type="int" Value="100" />
+    </Component>
+  </NModel>
+</ModelStructure>

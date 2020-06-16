@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ModelStructure MsgType="S_CLIENT" PortValue="IO_Type">
+  <NModel Name="test3.xml">
+    <Component Class="C_Generator" Name="g" Type="Atomic" height="150" width="250" x="238" y="344">
+      <Attribute Access="Public" Name="DistributionParameter" Type="int" Value="1"/>
+      <Attribute Access="Public" Name="AutonomousVehicleRatio" Type="int" Value="5"/>
+      <Attribute Access="Public" Name="ElectronicPaymentRatio" Type="int" Value="5"/>
+      <Port>
+        <In Name="pin_stop" height="30" width="30" x="88" y="374"/>
+        <In Name="pin_init" height="30" width="30" x="88" y="404"/>
+        <In Name="pin_bufin" height="30" width="30" x="88" y="464"/>
+        <Out Name="pout_bufout" height="30" width="30" x="638" y="374"/>
+      </Port>
+    </Component>
+    <Component Class="C_Processor" Name="p" Type="Atomic" height="150" width="250" x="446" y="693">
+      <Attribute Access="Private" Name="ID" Type="int" Value="0"/>
+      <Attribute Access="Public" Name="ProcType" Type="int" Value="0"/>
+      <Port>
+        <In Name="pin_bufin" height="30" width="30" x="296" y="723"/>
+        <Out Name="pout_transout" height="30" width="30" x="846" y="723"/>
+        <Out Name="pout_done" height="30" width="30" x="846" y="753"/>
+        <Out Name="pout_init" height="30" width="30" x="846" y="813"/>
+      </Port>
+    </Component>
+    <Component Class="C_Buffer" Name="b" Type="Atomic" height="150" width="250" x="1397" y="563">
+      <Attribute Access="Private" Name="ID" Type="int" Value="0"/>
+      <Port>
+        <In Name="pin_genin" height="30" width="30" x="1247" y="593"/>
+        <In Name="pin_ready" height="30" width="30" x="1247" y="623"/>
+        <Out Name="pout_procout" height="30" width="30" x="1797" y="593"/>
+        <Out Name="pout_genout" height="30" width="30" x="1797" y="623"/>
+      </Port>
+    </Component>
+    <Component Class="C_Transducer" Name="t" Type="Atomic" height="150" width="250" x="1476" y="886">
+      <Attribute Access="Public" Name="MaxCustomers" Type="int" Value="100"/>
+      <Port>
+        <In Name="pin_procin" height="30" width="30" x="1326" y="916"/>
+        <Out Name="pout_stop" height="30" width="30" x="1876" y="916"/>
+      </Port>
+    </Component>
+  </NModel>
+</ModelStructure>
